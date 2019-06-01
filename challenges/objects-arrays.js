@@ -138,6 +138,10 @@ zooAnimals = [{"animal_name":"Jackal, asiatic","population":5,"scientific_name":
 {"animal_name":"Hawk-eagle, crowned","population":10,"scientific_name":"Spizaetus coronatus","state":"Florida"},
 {"animal_name":"Australian pelican","population":5,"scientific_name":"Pelecanus conspicillatus","state":"West Virginia"}];
 
+
+
+
+
 /* Request 1: .forEach()
 
 The zoo wants to display both the scientific name and the animal name in front of the habitats.  Return an array with only the animal and scientific names in it.  The individual values in the array should look like this "Name: Jackal, asiatic, Scientific: Canis aureus."
@@ -175,6 +179,10 @@ console.log(zooAnimals.forEach)
 
 
 
+
+
+
+
 /* Request 2: .map()    
 
 The zoos need a list of all their animal's names (names only, not scientific) converted to lower case.  Create a new array named lowerCase and map over each name to convert them all to lower case.  Log the resut.
@@ -182,15 +190,40 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 */
 
 const lowerCase = [];
+
+for (let i = 0; i < zooAnimals.length; i++) {
+    lowerCase[i] = zooAnimals[i]['animal_name'].toLocaleLowerCase()
+}
+
+
 console.log(lowerCase); 
+
+
+
+
+
+
 
 /* Request 3: .filter() 
 
 The zoos are concenred about animals with a lower population count. Find out which animals have a population less than 5.
 
 */
+
 const lowerPopulation = [];
-console.log(lowerPopulation);
+
+for (let i=0; i < zooAnimals.length; i++) {
+    if(zooAnimals[i]['population'] < 5) {
+        lowerPopulation.push(zooAnimals[i]);
+    }
+}
+
+console.log(lowerPopulation)
+
+
+
+
+
 
 /* Request 4: .reduce() 
 
@@ -199,6 +232,7 @@ The zoos need to know their total animal population across the United States.  F
 */
 const populationTotal = 0;
 console.log(populationTotal);
+
 
 
 /* 
