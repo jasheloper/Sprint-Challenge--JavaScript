@@ -27,20 +27,23 @@ function multiply(num1,num2){
 }
 
 function greeting(first,last){
-  return `Hello ${first-name} ${last-name}, nice to meet you!`
+  return `Hello ${firstname} ${lastname}, nice to meet you!`
 }
+
+
+
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
 // consume(2,2,add); // 4
 // consume(10,16,multiply); // 160
-// consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
+consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: 
+// Explanation: they're both in the same scope.
 
 
 const external = "I'm outside the function";
