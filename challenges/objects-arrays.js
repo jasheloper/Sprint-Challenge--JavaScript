@@ -151,33 +151,20 @@ The zoo wants to display both the scientific name and the animal name in front o
 */
 
 
-for (let i = 0; i < zooAnimals.length; i++) {
-  animalNames[i] = zooAnimals[i]['animal_name'] + zooAnimals[i]['scientific_name']
-}
+
+// ??
 
 
-animalNames.forEach (function(item,index) {
-  console.log 
-  
-  ("NAME: " + (item) 
-  + ' ' +
+let animalName = [];
 
 
-  "SCIENTIFIC: " + (item) 
-
-  + "                        "
-
-  + "========================"
-
-  + "                        "
-  
-  
-  ) 
-
+zooAnimals.forEach (function(item) {
+    animalName.push(item);
 });
 
 
-console.log(zooAnimals.forEach)
+console.log(animalName)
+
 
 
 
@@ -193,12 +180,16 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 const lowerCase = [];
 
-for (let i = 0; i < zooAnimals.length; i++) {
-    lowerCase[i] = zooAnimals[i]['animal_name'].toLocaleLowerCase()
+
+for (i = 0; i < zooAnimals.length; i++) {
+    lowerCase[i] = zooAnimals[i]['animal_name']
 }
 
+const animalCasing = lowerCase.map(function(nameCasing) {
+  return 'Animal Name: ' + nameCasing.toLowerCase() ;
+});
 
-console.log(lowerCase); 
+console.log(animalCasing)
 
 
 
@@ -212,13 +203,16 @@ The zoos are concenred about animals with a lower population count. Find out whi
 
 */
 
+
 const lowerPopulation = [];
 
-for (let i=0; i < zooAnimals.length; i++) {
-    if(zooAnimals[i]['population'] < 5) {
-        lowerPopulation.push(zooAnimals[i]);
-    }
+for (let i = 0; i < zooAnimals.length; i++) {
+    lowerPopulation[i] = zooAnimals[i];
 }
+
+const filterLowPopulation = lowerPopulation.filter((population) => {
+    return population <= 5;
+});
 
 console.log(lowerPopulation)
 
