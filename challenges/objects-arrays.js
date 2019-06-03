@@ -151,15 +151,11 @@ The zoo wants to display both the scientific name and the animal name in front o
 */
 
 
-
-// ??
-
-
 let animalName = [];
 
 
 zooAnimals.forEach (function(item) {
-    animalName.push(item);
+    animalName.push(item.animal_name + ' - ' + item.scientific_name);
 });
 
 
@@ -204,17 +200,19 @@ The zoos are concenred about animals with a lower population count. Find out whi
 */
 
 
-const lowerPopulation = [];
+// ??
 
-for (let i = 0; i < zooAnimals.length; i++) {
-    lowerPopulation[i] = zooAnimals[i];
-}
+// const lowerPopulation = [];
 
-const filterLowPopulation = lowerPopulation.filter((population) => {
-    return population <= 5;
-});
+// for (i = 0; i < zooAnimals.length; i++) {
+//     lowerPopulation[i] = zooAnimals[i]['population'];
+// }
 
-console.log(lowerPopulation)
+// const filterLowPop = lowerPopulation.filter((population) =>
+// {return population < 5});
+
+// console.log(lowerPopulation)
+
 
 
 
