@@ -155,7 +155,7 @@ let animalName = [];
 
 
 zooAnimals.forEach (function(item) {
-    animalName.push(item.animal_name + ' - ' + item.scientific_name);
+    animalName.push('Animal Name: ' + item.animal_name + ' , ' + 'Scientific Name: ' + item.scientific_name);
 });
 
 
